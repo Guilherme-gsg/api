@@ -63,6 +63,8 @@ public class ProdutoController {
 						.body("Produto não encontrado!");
 					
 	}
+	
+	//curl -X PUT http://localhost:8080/produtos/1 -H "Content-Type: application/json; Charset=utf-8" -d @produto-pao2.json
 	@PutMapping("/produtos/{id}")
 	public ResponseEntity<Object> atualizarProduto(
 			@PathVariable Integer id, 
@@ -85,4 +87,8 @@ public class ProdutoController {
 	    		.status(HttpStatus.OK)
 	    		.body("Produto atualizado com sucesso!");
 	}
+	
+	
+	
+}
 	
